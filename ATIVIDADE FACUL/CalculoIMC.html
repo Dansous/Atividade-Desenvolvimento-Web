@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Saúde e Bem-Estar</title>
+  <link rel="stylesheet" href="./calculoIMC.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="./IMC.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <a id="logo" href="./index.html"><img src="./images/Logo2.png" alt=""></a>
+    <nav id="nav">
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+        aria-expanded="false">Menu
+        <span id="hamburger"></span>
+      </button>
+      <ul id="menu" role="menu">
+        <li><a href="./sobre.html">Sobre</a></li>
+        <li><a href="./CalculoIMC.html">Calcular IMC</a></li>
+        <li><a href="./Cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="box-information">
+        <h1>Tabela de classificação de IMC</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>IMC</th>
+              <th>CLASSIFICAÇÃO</th>
+              <th>OBESIDADE(GRAU)</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th>MENOR QUE 18,5</th>
+              <th>MAGREZA</th>
+              <th>0</th>
+            </tr>
+            <tr>
+              <th>ENTRE 18,5 E 24,9</th>
+              <th>NORMAL</th>
+              <th>0</th>
+            </tr>
+            <tr>
+              <th>ENTRE 25,0 E 29,9</th>
+              <th>SOBREPESO</th>
+              <th>1</th>
+            </tr>
+            <tr>
+              <th>ENTRE 30,0 E 39,9</th>
+              <th>OBESIDADE</th>
+              <th>2</th>
+            </tr>
+            <tr>
+              <th>MAIOR QUE 40,0</th>
+              <th>OBESIDADE GRAVE</th>
+              <th>3</th>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><strong>O que é IMC:</strong> IMC é a sigla para Índice de Massa Corporal, que é um cálculo que serve para
+          avaliar se a pessoa está dentro do seu peso ideal em relação à altura.</p>
+      </div>
+
+      <article>
+        <h1>Digite o seu peso e a sua altura para calcularmos o seu IMC</h1>
+
+        <h2>Digite todos os campos</h2>
+
+        <div class="inputs-content">
+          <div class="content-input">
+            <input required type="text" id="weight" placeholder="Peso">
+          </div>
+
+          <div class="content-input">
+            <input required type="text" id="height" placeholder="Altura">
+          </div>
+        </div>
+
+        <button onclick="CalcIMC();">Calcular</button>
+      </article>
+    </section>
+  </main>
+
+</body>
+
+</html>

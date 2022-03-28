@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: lightblue blue; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, lightblue, blue);
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  width: max-content;
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: default;
+  text-decoration: none;
+}
+
+
+main {
+    background: url(andrei-santiago-2MHz9-baZyM-unsplash.jpg) no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+    
+}
+#header {
+  box-sizing: border-box;
+  height: 90px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #23232e;
+  
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #e7e7e7;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+ 
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+
+
+/* CSS HEADER */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+  padding: 0 140px;
+  height: 140px;
+  background-color: #6B5BD4;
+}
+
+header h1 {
+  color: #fff;
+}
+
+header h1 strong {
+  color: #5BD391;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 30px;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: all 0.2;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+}
+
+/* CSS CALC */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  height: calc(100vh - 140px);
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 50px;
+  width: 1100px;
+  height: 550px;
+}
+
+section p {
+  text-align: justify; 
+  width: 500px;
+  margin-top: 40px;
+  
+}
+
+section h2 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 26px;
+}
+
+section h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+article {
+  height: 100%;
+  width: 45%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+article h1 {
+  margin-bottom: 40px;
+}
+
+article button {
+  background-color: #23232e;
+  width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+
+  border: 0;
+}
+
+.inputs-content {
+  margin: 20px 0;
+  display: flex;
+}
+
+.content-input {
+  margin: 0 2px;
+}
+
+.content-input input {
+  border: 0;
+  background-color: #FCFCFF;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+
+  color: #9590af;
+  font-size: 16px;
+  padding-left: 20px;
+
+  outline: none;
+
+  width: 260px;
+  height: 55px;
+}
+
+.content-input input::placeholder {
+  font-size: 14px;
+}
+
+table {
+  border: 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+table th {
+  border: 1px solid #E6E6F0;
+  padding: 15px;
+
+  color: #373252;
+  font-size: 16px;
+}
